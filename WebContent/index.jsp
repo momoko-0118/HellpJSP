@@ -8,7 +8,10 @@
 </head>
 <body>
 	<p>こんにちは！</p>
-	<% out.println(new java.util.Date()); %>
+	<% out.println(new java.util.Date()); %><%--javaのパッケージ --%>
+	
+	<%--staticキーワードで就職された整数型の変数または関数を宣言する構文
+	staticが宣言された変数や関数は、宣言されたファイル内でのみアクセス可能 --%>
 	<%!
 		static int add(int a, int b){
 		return a+b;
@@ -17,7 +20,8 @@
 	<p>1+2=<%=add(1,2) %></p>
 	<p>1+2=<%=add(3,4) %></p>
 	
-	<%--変数の追加 --%>
+	<%--変数の追加 
+	!付きだと、ページ更新ごとに数字が増えていく--%>
 	<%!static int countA=0; %>
 	<%
 		int countB=0;
@@ -25,7 +29,7 @@
 		countB++;
 	%>
 	
-	<p>宣言による変数 countA<%=countA %></p>
+	<p>宣言による変数 countA=<%=countA %></p>
 	<p>スクリプトレットによる変数 countB=<%=countB %></p>
 	
 	<%--乱数 --%>

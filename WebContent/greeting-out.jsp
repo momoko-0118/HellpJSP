@@ -7,6 +7,7 @@
 <title>greeting.out</title>
 </head>
 <body>
+	<%--文字化け用の記述 --%>
 	<% request.setCharacterEncoding("UTF-8"); %>
 	<p>こんにちは、<%=request.getParameter("user") %>さん！</p>
 </body>

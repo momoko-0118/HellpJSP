@@ -8,6 +8,9 @@
 </head>
 <body>
 	<%@page errorPage="total-error.jsp" %>
+	<%--Integer.parseInt:Stringをintに変換する。
+	getParameterがStringだから 
+	getParameterで入力フォームの指定のデータを持ってくる--%>
 	<%
 	request.setCharacterEncoding("UTF-8");
 	int price=Integer.parseInt(request.getParameter("price"));

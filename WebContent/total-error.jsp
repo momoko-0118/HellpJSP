@@ -9,12 +9,14 @@
 <body>
 	<%@page isErrorPage="true" %>
 	<p>数値を入力してください</p>
+	<%--history.backで一つまえに戻る --%>
 	<button onclick="history.back()">戻る</button>
 	<br>
 	<p><%=exception %></p>
 	<table border=1>
 	<tr>
 		<td><strong>エラーメッセージ</strong></td>
+		<%--詳細なエラーの表示 --%>
 		<td><%= exception.getMessage() %></td>
 	</tr>
 	<tr>
